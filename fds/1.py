@@ -1,4 +1,6 @@
 '''
+Atharva Nitin Bhange
+SE A 08
 Assignment 1
 Write a Python program to store marks scored in subject “Fundamental of Data Structure” 
 by N students in the class. Write functions to compute following:
