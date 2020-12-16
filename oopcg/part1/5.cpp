@@ -1,3 +1,10 @@
+/*
+Atharva Nitin Bhange SE A 08
+
+Write a function template for selection sort that inputs, sorts and outputs an integer array and
+a float array. 
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -80,3 +87,24 @@ int main(void)
 
     return 0;
 }
+
+/*
+Output 
+
+Taking Integer array     
+How many terms you want: 4
+Enter number: 5
+Enter number: 4
+Enter number: 7
+Enter number: 2
+Sorted array is
+2, 4, 5, 7
+Taking Float array       
+How many terms you want: 4
+Enter number: 1.2
+Enter number: 3.4
+Enter number: 6.2
+Enter number: 3.1
+Sorted array is
+1.2, 3.1, 3.4, 6.2
+*/

@@ -1,4 +1,7 @@
 /*
+Atharva Nitin Bhange
+SE A 08
+
 Write a C++ program that creates an output file,
 writes information to it, close the file, open it 
 again as an input file and read the information from the file.
@@ -60,3 +63,32 @@ int main()
     file.close();
     return 0;
 }
+
+/*
+Output 
+
+Enter the total number of students2
+
+ Enter the roll number => 12
+
+ Enter the name   =>  abc
+
+ Enter the marks   =>  45
+
+ Enter the roll number => 23
+
+ Enter the name   =>  def
+
+ Enter the marks   =>  23
+
+-----------------------------------
+Name :    abc
+Roll No : 12
+Marks   : 45
+-----------------------------------
+-----------------------------------
+Name :    def
+Roll No : 23
+Marks   : 23
+-----------------------------------
+*/
