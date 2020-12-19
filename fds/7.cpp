@@ -32,6 +32,7 @@ public:
     void addMember(int index, int prn, string name);
     void display();
     void concat(LinkedList &newlist);
+    int totalMembers();
 };
 
 LinkedList::LinkedList()
@@ -139,18 +140,38 @@ void LinkedList::concat(LinkedList &newlist)
     }
 }
 
+int LinkedList::totalMembers()
+{
+    return length;
+}
+
 int main(void)
 {
     LinkedList Members1;
     Members1.addMember(0, 111111, "Atharva");
     Members1.addMember(1, 111112, "Rahul");
+    Members1.display();
+    cout << "Total Number of members in list 1 :- " << Members1.totalMembers() << endl;
     LinkedList Members2;
     Members2.addMember(0, 111113, "Manas");
     Members2.addMember(1, 111114, "Mehul");
-    Members1.display();
     Members2.display();
+    cout << "Total Number of members in list 2 :- " << Members2.totalMembers() << endl;
+    Members1.deleteMember(1);
+    Members1.display();
     Members1.concat(Members2);
     Members1.display();
 
     return 0;
 }
+
+/*
+Output 
+
+[ ( 111111, Atharva ), ( 111112, Rahul ) ]  // addMember operation output for Linked List 1
+Total Number of members in list 1 :- 2
+[ ( 111113, Manas ), ( 111114, Mehul ) ]    // addMember operation output Linked List 2
+Total Number of members in list 2 :- 2
+[ ( 111111, Atharva ) ]                     // deleteMember operation output for Linked List 1
+[ ( 111111, Atharva ), ( 111113, Manas ), ( 111114, Mehul ) ]   // concat operation output
+*/

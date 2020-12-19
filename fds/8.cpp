@@ -133,25 +133,32 @@ BinaryNumber *BinaryNumber::onesComplement()
 BinaryNumber *BinaryNumber::twosComplement()
 {
     BinaryNumber onesComp = *onesComplement();
-    //onesComp.display();
     BinaryNumber unity("1");
     BinaryNumber *ans = onesComp.plus(unity);
-    // BinaryNumber real = *ans;
-    // real.display();
-    //ans->display();
     return ans;
 }
 
 int main(void)
 {
-    BinaryNumber n1("11");
-    BinaryNumber n2("11");
+    BinaryNumber n1("101");
+    BinaryNumber n2("110");
     n1.display();
     n2.display();
-    //cout << n2.tail->value << endl;
     BinaryNumber addition = *n1.plus(n2);
     addition.display();
-    BinaryNumber twosComp = *addition.twosComplement();
+    BinaryNumber onesComp = *n1.onesComplement();
+    onesComp.display();
+    BinaryNumber twosComp = *n1.twosComplement();
     twosComp.display();
     return 0;
 }
+
+/*
+Output
+
+[ 1, 0, 1 ]         // Displaying binaray number 101 is created using doubly Linked List 
+[ 1, 1, 0 ]         // Displaying binaray number 110 is created using doubly Linked List
+[ 1, 0, 1, 1 ]      // Adding binaray number 101 + 110 
+[ 0, 1, 0 ]         // Ones complement of Binary Number 101
+[ 0, 1, 1 ]         // Twos complement of Binary Number 101
+*/
